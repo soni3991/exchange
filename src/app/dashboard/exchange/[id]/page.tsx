@@ -54,8 +54,8 @@ export default async function ExchangeDetailPage({
   return (
     <>
       <DashboardNavbar />
-      <main className="w-full bg-gray-900 min-h-screen text-white">
-        <div className="container mx-auto px-4 py-8">
+      <main className="w-full bg-gray-900 min-h-screen text-white overflow-x-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           {/* Header with back button */}
           <div className="flex items-center mb-6">
             <Button

@@ -81,8 +81,8 @@ export default async function HistoryPage() {
   return (
     <>
       <DashboardNavbar />
-      <main className="w-full bg-gray-900 min-h-screen text-white">
-        <div className="container mx-auto px-4 py-8">
+      <main className="w-full bg-gray-900 min-h-screen text-white overflow-x-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <h1 className="text-3xl font-bold mb-6">Transaction History</h1>
 
           {/* Search and Filter */}

@@ -12,6 +12,7 @@ import {
   Clock,
 } from "lucide-react";
 import { createClient } from "../../supabase/server";
+import React from "react";
 import Link from "next/link";
 
 export default async function Home() {
@@ -21,32 +22,30 @@ export default async function Home() {
   } = await supabase.auth.getUser();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white h-[4393px]">
       <Navbar />
-
       {/* Hero Section */}
-      <section className="py-20 md:py-32 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-24 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200&q=80')] bg-cover bg-center opacity-20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-3xl mx-auto text-center">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               Anonymous Fiat-USDT Exchange
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-10">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 md:mb-10">
               Exchange local currency for USDT without registration, KYC, or
               personal data exposure.
             </p>
             <Link
               href="/dashboard"
-              className="inline-flex items-center px-8 py-4 text-lg font-medium text-black bg-yellow-400 rounded-lg hover:bg-yellow-300 transition-colors"
+              className="inline-flex items-center px-4 sm:px-6 md:px-8 py-3 md:py-4 text-base md:text-lg font-medium text-black bg-yellow-400 rounded-lg hover:bg-yellow-300 transition-colors"
             >
               Start Anonymous Exchange
-              <ArrowUpRight className="ml-2 w-5 h-5" />
+              <ArrowUpRight className="ml-2 w-4 sm:w-5 h-4 sm:h-5" />
             </Link>
           </div>
         </div>
       </section>
-
       {/* How It Works Section */}
       <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
@@ -104,7 +103,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-24 bg-gray-900">
         <div className="container mx-auto px-4">
@@ -154,7 +152,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 bg-yellow-400 text-gray-900">
         <div className="container mx-auto px-4">
@@ -174,7 +171,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4 text-center">
@@ -194,7 +190,6 @@ export default async function Home() {
           </Link>
         </div>
       </section>
-
       <Footer />
     </div>
   );
